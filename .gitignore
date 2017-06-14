@@ -1,0 +1,24 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.war
+*.ear
+
+.idea/
+autodesk.iml
+.project
+out/
+将删除 .idea/workspace.xml
+将删除 WebRoot/WEB-INF/lib/
+将删除 WebRoot/WEB-INF/classes/
+将删除 src/java/com/imefuture/autodesk/dao/
+将删除 src/java/com/imefuture/autodesk/entity/
+将删除 src/test/
+/.idea/
+/out/
+/autodesk-standard.iml
+/target/
+/redis.client.iml
