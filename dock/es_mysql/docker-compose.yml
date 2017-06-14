@@ -1,0 +1,6 @@
+version: '2'
+services:
+  zookeeper:
+    image: es_jdbc_mysql_v2
+    build: ./build
+    container_name: es_jdbc_mysql_v2

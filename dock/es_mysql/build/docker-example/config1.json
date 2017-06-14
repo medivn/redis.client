@@ -1,0 +1,25 @@
+{
+  "type": "jdbc",
+  "jdbc": {
+    "url": "jdbc:mysql://120.24.12.8:3306/drawingcenter?useUnicode=true&autoReconnect=true",
+    "user": "root",
+    "password": "xueshilei@1q2sa.com",
+     "schedule" : "0 0-59 0-23 ? * *",
+    "sql": "select *,accId as _id from drawing_center_accessory",
+    "index": "drawing_center_accessory",
+    "type": "drawing_center_accessory",
+    "elasticsearch": {
+      "cluster": "test",
+      "host": "172.17.0.3",
+      "port": "9300"
+    },
+    "metrics": {
+      "enabled": true,
+      "interval": "1m",
+      "logger": {
+        "plain": false,
+        "json": true
+      }
+    }
+  }
+}

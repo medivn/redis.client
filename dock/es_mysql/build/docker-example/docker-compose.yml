@@ -1,0 +1,6 @@
+elasticsearch:
+  build: .
+  dockerfile: Dockerfile_elasticsearch
+  command: -Des.cluster.name="test" -Des.node.name="test1" -Des.network.bind_host=0.0.0.0
+  ports:
+    - "127.0.0.1:9200:9200"

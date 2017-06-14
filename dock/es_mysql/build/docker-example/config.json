@@ -1,0 +1,30 @@
+{
+  "type": "jdbc",
+  "jdbc": {
+    "url": "jdbc:mysql://120.24.12.8:3306/drawingcenter?useUnicode=true&autoReconnect=true",
+    "user": "root",
+    "password": "xueshilei@1q2sa.com",
+    "sql": "select * from drawing_center_accessory",
+    "index_settings": {
+      "index": {
+        "number_of_shards": 10
+      }
+    },
+    "index": "drawing_center_accessory",
+    "type": "drawing_center_accessory",
+    "elasticsearch": {
+      "cluster": "test",
+      "host": "{{ .Env.ELASTICSEARCH_PORT_9300_TCP_ADDR }}",
+      "port": "9300"
+    },
+    "statefile": "/statefile.json",
+    "metrics": {
+      "enabled": true,
+      "interval": "1m",
+      "logger": {
+        "plain": false,
+        "json": true
+      }
+    }
+  }
+}

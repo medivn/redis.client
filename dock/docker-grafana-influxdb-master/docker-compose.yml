@@ -1,0 +1,12 @@
+version: '2'
+services:
+  influx_grafana:
+    image: influx_grafana
+    container_name: influx_grafana
+    restart: always
+    command: /usr/bin/supervisord
+    ports:
+     - "80:80"
+     - "8083:8083"
+     - "8084:8084"
+     - "8086:8086"

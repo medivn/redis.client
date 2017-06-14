@@ -1,0 +1,30 @@
+{
+  "type": "jdbc",
+  "jdbc": {
+    "url": "jdbc:mysql://127.0.0.1:3306/imefuture_convert?useUnicode=true&autoReconnect=true",
+    "user": "root",
+    "password": "root",
+    "sql": "select * from convert_file_record",
+    "index_settings": {
+      "index": {
+        "number_of_shards": 10
+      }
+    },
+    "index": "convertfilerecord",
+    "type": "convertfilerecord",
+    "elasticsearch": {
+      "cluster": "test",
+      "autodiscover": true,
+      "host": "127.0.0.1",
+      "port": "9200"
+    },
+    "metrics": {
+      "enabled": true,
+      "interval": "1m",
+      "logger": {
+        "plain": false,
+        "json": true
+      }
+    }
+  }
+}

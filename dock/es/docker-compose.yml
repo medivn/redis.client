@@ -1,0 +1,10 @@
+version: '2'
+services:
+  zookeeper:
+    image: elasticsearch-my
+    build: ./build
+    container_name: elasticsearch-my
+    command: -Des.cluster.name="test" -Des.node.name="test1" -Des.network.bind_host=0.0.0.0
+    ports:
+      - 9200:9200
+      - 9300:9300
